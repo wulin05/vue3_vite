@@ -39,7 +39,7 @@
   // 此处只是为了巩固之前的类型限制的知识点
   import { type Persons } from '../types'
 
-  const newsList:Persons = reactive([
+  const newsList = reactive<Persons>([
     {id:nanoid(), title:'一种抗癌食物', content:'西蓝花'},
     {id:nanoid(), title:'如何一夜暴富', content:'学IT'},
     {id:nanoid(), title:'震惊,万万没想到', content:'中了1个亿'},

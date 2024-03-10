@@ -10,7 +10,7 @@
 
 <script lang="ts" setup name="Person">
 import { ref } from 'vue'
-// ##### 引入defineExpose,让父组件可以通过子组件标签上的ref获取到子组件的数据
+// ##### 引入defineExpose,让父组件可以通过子组件标签上的ref获取到子组件的数据：宏函数,可以不用引入,直接用也没问题。
 import { defineExpose } from 'vue'
 
 // 创建一个title2,用于存储ref标记的内容
@@ -28,7 +28,7 @@ function showLog() {
 }
 
 // ##### 通过defineExpose将子组件的数据expose出去,a和b数据暴露给父组件
-// (因为App父组件中在Person子组件标签上使用了ref,所以父组件可以获取到a,b)
+// (因为App父组件中在Person子组件标签上使用了ref,所以App组件可以获取到Person子组件defineExpose出来的a,b)
 defineExpose({ a, b })
 
 </script>
